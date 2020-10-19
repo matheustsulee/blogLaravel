@@ -1,0 +1,158 @@
+#site {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.sobre {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#sobreautor {
+    width: 60%;
+    height: auto;
+    margin: 4em auto;
+    font-size: 0.8em;
+}
+
+#sobreautor h5 {
+    color: #FF3900;
+    font-weight: bolder;
+    margin-left: 40%;
+}
+
+#sobreautor img {
+    border-radius: 10em;
+    margin-top: 1em;
+    margin-right: 50%;
+    margin-left: 50%;
+}
+
+#cabecalho {
+    background-color: #192343;
+    text-align: right;
+    padding: 2em 1px;
+}
+
+#menu {
+    width: 80%;
+    height: auto;
+    float: right;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#menu li a {
+    color: white;
+}
+
+#menu li {
+    list-style: none;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#menu li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#menu li ul {
+    position: absolute;
+    top: 2.5em;
+    left: 8em;
+    background-color: #192343;
+    display: none;
+    padding: 1em 1em;
+}
+
+#menu li:hover ul,
+.menu li.over ul {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+}
+
+
+/*corpo do site*/
+
+.posts {}
+
+#btnposts {
+    border: 1px solid black;
+    border-radius: 0%;
+    padding-bottom: -0.7em;
+    font-size: 1.9em;
+    vertical-align: 50%;
+    width: 40%;
+    height: auto;
+}
+
+#vermais {
+    border: 1px solid black;
+    border-radius: 0%;
+    padding-bottom: -0.7em;
+    font-size: 1.9em;
+    vertical-align: 50%;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin: 3em auto;
+}
+
+#btnposts:hover,
+#vermais:hover {
+    background-color: midnightblue;
+    color: mintcream;
+}
+
+.box {
+    width: 90%;
+    height: auto;
+    margin: 2em auto;
+}
+
+hr {
+    background-color: silver;
+    margin: 2em auto;
+}
+
+pre {
+    color: darkgray;
+    text-align: center;
+}
+
+.box p {
+    margin-left: 10%;
+}
+
+
+/*rodape*/
+
+.rodape {
+    width: 100%;
+    height: auto;
+    background-color: #192343;
+    padding: 1em 1px;
+}
+
+#progup {}
+
+// Mixin itself
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+// Usage as a mixin
+.element {
+    @include clearfix;
+}

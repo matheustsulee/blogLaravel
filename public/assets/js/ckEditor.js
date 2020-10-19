@@ -1,0 +1,6 @@
+
+
+
+     CKEDITOR.replace( 'content' );
+
+      

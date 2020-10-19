@@ -1,0 +1,18 @@
+.footer-img {
+    color: #FFF;
+    width: 100%;
+    display: flex;
+}
+
+.figure {
+    -webkit-filter: grayscale(100%);
+}
+
+.figure:hover {
+    -webkit-filter: grayscale(0%);
+    transition: 1s;
+}
+
+figure img {
+    padding: 0.5em 1.2em;
+}
