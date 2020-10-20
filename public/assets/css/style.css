@@ -8587,6 +8587,12 @@ h6 {
     object-fit: cover;
 
 }
+.mat_noticia
+{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;  
+}
 .img_semtitulo
 {   
     width: 520px;

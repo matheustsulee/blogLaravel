@@ -38,7 +38,7 @@ class CategoryController extends Controller
     {
        
         if($categoria->create($request->except('_token'))){
-            redirect()->back();
+           return redirect()->back();
         }
     }
 

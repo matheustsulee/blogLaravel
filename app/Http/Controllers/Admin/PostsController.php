@@ -60,6 +60,7 @@ class PostsController extends Controller
 
         $postagem = $request->all();       
         $postagem['link'] = Str::slug($postagem['title'], "-"); 
+        $postagem['user_id'] = auth()->user()->id; 
 
         if($request->hasFile('imagem') && $request->imagem->isValid()){
             $image_path = $request->imagem->store('fotos');
