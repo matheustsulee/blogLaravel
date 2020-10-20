@@ -8569,9 +8569,9 @@ h6 {
     font-size: 12px;
 }
 
-.mais-noticia-imagem img {
-    width: 300px;
-    height: 200px;
+.ultimas_noticias{
+    width: 100%;
+    height: 300px;
     object-fit: cover;
 
 }
@@ -8582,8 +8582,8 @@ h6 {
 }
 
 .informes{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
 
 }

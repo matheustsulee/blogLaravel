@@ -18,8 +18,7 @@ class SiteController extends Controller
 
       
         $posts = Post::orderBy('id', 'DESC')->with('category')->get();
-        
-       dd($posts);
+     
         return view('page.site.index',[
             'posts' => $posts
         ]);
@@ -54,7 +53,7 @@ class SiteController extends Controller
      */
     public function show($noticia)
     {
-        dd($noticia); 
+      
         $post = Post::where('link', $noticia)->first();
         
         return view('page.site.noticia', [

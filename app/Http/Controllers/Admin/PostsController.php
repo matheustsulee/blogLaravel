@@ -21,7 +21,7 @@ class PostsController extends Controller
     {
       
         $posts = Post::orderByDesc('id')->limit(10)->paginate(5);
-            //dd($posts->all());    
+                
              return view('page.admin.post.index',
             [
                 'posts' => $posts
@@ -54,6 +54,10 @@ class PostsController extends Controller
     public function store(Request $request)
     {
 
+       $i = 0;
+       while ($i <= 15) {
+        
+
         $postagem = $request->all();       
         $postagem['link'] = Str::slug($postagem['title'], "-"); 
 
@@ -71,10 +75,11 @@ class PostsController extends Controller
        }
 
       if(Post::create($postagem)){
-       return redirect()->back();
+       //return redirect()->back();
       }
 
-     
+      $i++;
+       }
     }
 
     /**
@@ -85,7 +90,7 @@ class PostsController extends Controller
      */
     public function show($noticia)
     {
-       
+
         
     }
 

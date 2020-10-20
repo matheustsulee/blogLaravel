@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="PT-BR">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title')</title>
@@ -27,7 +27,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3">
-                      <a href="index.php">  <img src="assets/img/logo.png" class="img-fluid" alt="Responsive image"></a>
+                      <a href="index.php">  <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid" alt="Responsive image"></a>
                     </div>
                     <div class="col-md-5 text-right">
                         <div id="menu">

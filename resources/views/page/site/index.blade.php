@@ -22,7 +22,7 @@
                 <h6 class="mt-3 mb-3">{{ $posts[$i]->subtitle }}.</h6>
 
                  <div class="col-12 col-lg-12 col-md-12 p-0">
-                    <img src='{{ url("storage/{$posts[$i]->img}") }}' width="100%">
+                    <img src='{{ url("storage/{$posts[$i]->img}") }}' width="100%" class="ultimas_noticias">
                     <a type="button" class="btn btn-outline-dark rounded-0 btn-block mt-2" href="{{ $posts[$i]->link }}">LER +</a>
                     
                 </div> 

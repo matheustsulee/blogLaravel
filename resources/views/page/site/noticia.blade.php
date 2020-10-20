@@ -3,7 +3,7 @@
 @section('title', 'TITULO DE TESTE')
 @section('box')
 
-<img style="margin-top:-2em;" src="assets/img/planalto.jpg"  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
+<img style="margin-top:-2em;" src="{{ asset('assets/img/planalto.jpg') }}"  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 @stop
 
@@ -19,7 +19,7 @@
 
                 <img src='{{ url("storage/{$post->img}") }}' width="100%" class="mt-3 mb-5">
                 <div class="text-justify">
-                    {{ strip_tags($post->content) }}
+                    {!! $post->content !!}
                 </div>
                 
             
