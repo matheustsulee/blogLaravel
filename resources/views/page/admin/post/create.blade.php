@@ -69,5 +69,5 @@
   </div>
 </div>
 <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
-<script src="{{ asset('assets/js/ckEditor.js') }}"></script>
+<script src="{{ asset('assets/js/ckEditor.js') }}" charset = "utf-8" config.entities_latin = false></script>
 @endsection

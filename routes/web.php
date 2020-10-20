@@ -35,7 +35,7 @@ Route::post('/admin/anuncios/novo', 'Admin\AnunciosController@store')->name('anu
 
 
 Route::get('/', 'SiteController@index')->name('home.site');
-Route::get('/{notica}', 'SiteController@show')->name('noticia.site');
+Route::get('/noticia/{notica}', 'SiteController@show')->name('noticia.site');
 
 
 Auth::routes();
