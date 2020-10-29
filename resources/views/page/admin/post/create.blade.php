@@ -46,24 +46,7 @@
 
         
       </div>
-         <div class="form-group">
-          <div class="row">
-            <div class="col-8">
-                <label for="exampleFormControlInput1">Data Pulbicação</label>
-            </div>
-             <div class="col-4" align="right">
-                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="checado" id="agendar" name="chekbox">
-                  <label class="form-check-label" for="defaultCheck1">
-                    AGENDAR
-                  </label>
-                </div>
-            </div>
-          </div>
-        
-       
-        <input type="datetime-local" class="form-control" placeholder="Subtítulo da matéria" name="date_hour" id="data_hora">
-      </div>
+      
       <button type="submit" class="btn btn-lg btn-block btn-success">CADASTRAR</button>
     </form> 
   </div>

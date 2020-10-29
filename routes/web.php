@@ -29,7 +29,11 @@ Route::post('/admin/categoria/novo', 'Admin\CategoryController@store')->name('ca
 Route::get('/admin/anuncios', 'Admin\AnunciosController@index')->name('anuncio.index');
 Route::get('/admin/anuncios/novo', 'Admin\AnunciosController@create')->name('anuncio.novo');
 Route::post('/admin/anuncios/novo', 'Admin\AnunciosController@store')->name('anuncio.novo.store');
+Route::get('/admin/capas', 'Admin\CapasController@index')->name('capas.index');
+Route::post('/admin/capas', 'Admin\CapasController@store')->name('capa.store');
 });
+
+
 
 
 

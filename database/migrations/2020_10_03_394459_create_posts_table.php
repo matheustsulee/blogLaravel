@@ -18,7 +18,6 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->text('content');
-            $table->dateTimeTz('date_hour');
             $table->string('img')->nullable();
             $table->text('link');
             $table->string('tag');
@@ -26,7 +25,7 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')
                                 ->references('id')
-                                ->on('categories')  
+                                ->on('categories')
                                 ->onDelete('cascade');
             $table->foreign('user_id')
                                 ->references('id')
@@ -35,7 +34,7 @@ class CreatePostsTable extends Migration
             $table->timestampsTz();
 
 
-            
+
         });
     }
 

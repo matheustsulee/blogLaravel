@@ -8,6 +8,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <!-- Place favicon.ico in the root directory -->
@@ -22,109 +23,71 @@
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark" id="cabecalho">
+
+ <a href='{{ route("home.site") }}'>  <img src="{{ asset('assets/img/logo.png') }}" alt="Responsive image" width="50%"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href='{{ route("home.site") }}'>Home <span class="sr-only">(página atual)</span></a>
+      </li>
+    
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Quadros do Nação
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <a href="">Na Espiral da História</a>
+          <a href="">Teorias E suas Práticas</a>
+          <a href="">Imersão Cultural</a>
+          <a href="">Projeto ClioLeaks</a>
+          <a href="">Reflexões Politítico-Cotidianas</a>
+          <a href="">A Roda das Contradições:<br>Debates e Polêmicas</a> -->
+        </div>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav>
+
     <div id="site">
-        <div id="cabecalho">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3">
-                      <a href="index.php">  <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid" alt="Responsive image"></a>
-                    </div>
-                    <div class="col-md-5 text-right">
-                        <div id="menu">
-                            <nav class="navbar navbar-expand-md navbar-light">
-                              
-                                <li><a href="#">Quadros do Nação</a>
-                                    <ul>
-                                        <li><a href="">Na Espiral da História</a></li>
-                                        <li><a href="">Teorias E suas Práticas</a></li>
-                                        <li><a href="">Imersão Cultural</a></li>
-                                        <li><a href="">Projeto ClioLeaks</a></li>
-                                        <li><a href="">Reflexões Politítico-Cotidianas</a></li>
-                                        <li><a href="">A Roda das Contradições:<br>
-                                                Debates e Polêmicas</a></li>
-
-
-                                    </ul>
-                                </li>
-                                <li><a id="modal-723776" href="#modal-container-723776" role="button" class="btn" data-toggle="modal">Redes Sociais</a></li>
-                                <div class="modal fade" id="modal-container-723776" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="myModalLabel">
-                                                    Redes Sociais
-                                                </h5>
-                                                <button type="button" class="close" data-dismiss="modal">
-                                                    <span aria-hidden="true">×</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div id="social">
-
-                                                    <p>Você pode encontrar todo o conteudo do Nação Incógnita por aqui</p>
-                                                    <div class="footer-img">
-                                                        <div class="figure">
-                                                            <a href="#" target="_blank">
-                                                                <figure>
-                                                                    <img src="assets/img/redes/face.png" alt="#" style="width: 100%;">
-                                                                    
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="figure">
-                                                            <a href="#" target="_blank">
-                                                                <figure>
-                                                                    <img src="assets/img/redes/vk.png" alt="#" style="width: 100%;">
-                                                                    
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="figure">
-                                                            <a href="#" target="_blank">
-                                                                <figure>
-                                                                    <img src="assets/img/redes/youtube.png" alt="#" style="width: 100%";>
-                                                                    
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer">
-
-
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Close
-                                                </button>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-                        </div>
-
-                        </nav>
-
-                    </div>
-
-
-                    <div class="col-md-4 text-right">
-                        <form class="form-inline my-1 my-lg-0">
-                            <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Pesquisa</button>
-                        </form>
-                    </div>
-                </div>
-
+       
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Redes Sociais</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-4">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </div>
+            <div class="col-4">
+               <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-4">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
             </div>
         </div>
+      </div>
+     
+
+    </div>
+  </div>
+</div>
 
         <div class="cleafix"></div>
 
@@ -151,7 +114,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="assets/img/logo.png" class="img-fluid" alt="Responsive image">
+                    <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid" alt="Responsive image">
                 </div>
 
                 <div class="col-md-8">

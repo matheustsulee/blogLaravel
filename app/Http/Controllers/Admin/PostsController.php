@@ -19,9 +19,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-      
+
+
         $posts = Post::orderByDesc('id')->limit(10)->paginate(5);
-                
+        //$informes = Post::orderByDesc('id')->limit(2)->where('informe', "S")->get();
+
              return view('page.admin.post.index',
             [
                 'posts' => $posts
@@ -53,21 +55,22 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        
 
        $i = 0;
        while ($i <= 15) {
-        
 
-        $postagem = $request->all();       
-        $postagem['link'] = Str::slug($postagem['title'], "-"); 
-        $postagem['user_id'] = auth()->user()->id; 
+
+        $postagem = $request->all();
+        $postagem['link'] = Str::slug($postagem['title'], "-");
+        $postagem['user_id'] = auth()->user()->id;
 
         if($request->hasFile('imagem') && $request->imagem->isValid()){
             $image_path = $request->imagem->store('fotos');
             $postagem['img'] = $image_path;
 
-        }       
-       
+        }
+
        if(isset($postagem['date_hour']) && !empty($postagem['date_hour'])){
             $postagem['date_hour']= Carbon::parse($postagem['date_hour'])->format('Y-m-d H:i');
             $postagem['scheduled']='1'; // campo que coloca postagem com agendada
@@ -92,7 +95,7 @@ class PostsController extends Controller
     public function show($noticia)
     {
 
-        
+
     }
 
     /**

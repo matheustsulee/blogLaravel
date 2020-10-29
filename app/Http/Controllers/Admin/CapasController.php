@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Capa;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdminPagamentosController extends Controller
+
+class CapasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +16,14 @@ class AdminPagamentosController extends Controller
      */
     public function index()
     {
-        //
+        $capas = Capa::all();
+        $interna = Capa::where('path_interna', "!=", "null")->orderBy("id", "DESC")->first();
+        $home = Capa::where('path_home', "!=", "null")->orderBy("id", "DESC")->first();
+
+        return view('page.admin.capas.index', [
+            'interna' => $interna,
+            'home' => $home
+        ]);
     }
 
     /**
@@ -23,7 +33,7 @@ class AdminPagamentosController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +44,33 @@ class AdminPagamentosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       if(isset($request->capa_home)){
+
+           $capa = $request->all();
+
+           if($request->hasFile('capa_home') && $request->capa_home->isValid()){
+
+               $image_path = $request->capa_home->store('capas/home');
+               $capa = new Capa();
+               $capa['path_home'] = $image_path;
+
+           }
+           $capa->save();
+       }
+        if(isset($request->capa_interna)){
+
+
+            if($request->hasFile('capa_interna') && $request->capa_interna->isValid()){
+
+                $image_path = $request->capa_interna->store('capas/interna');
+                $capa = new Capa();
+                $capa['path_interna'] = $image_path;
+
+            }
+            $capa->save();
+        }
+
     }
 
     /**

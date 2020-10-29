@@ -231,7 +231,7 @@ return [
     */
 
     'menu' => [
-   
+
          [
             'text'    => 'Postagem',
             'icon'    => 'fas fa-fw fa-share',
@@ -244,14 +244,7 @@ return [
                     'text' => 'Nova',
                     'url'  => 'admin/postagem/novo',
                 ],
-                [
-                    'text' => 'Publicadas',
-                    'url'  => 'admin/postagem/publicada',
-                ], 
-                [
-                    'text' => 'Agendada',
-                    'url'  => 'admin/postagem/agendada',
-                ],            
+
 
             ]
         ],
@@ -266,33 +259,18 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => '#',
-                ],            
+                ],
 
             ]
-        ], 
-         [
-            'text'    => 'Anuncios',
+        ],
+        [
+            'text'    => 'Capas',
             'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'Configuração',
-                    'url'  => 'admin/anuncios',
-                ],
-                [
-                    'text' => 'Novo',
-                    'url'  => 'admin/anuncios/novo',
-                ],
-                [
-                    'text' => 'Adsense',
-                    'url'  => 'adss',
-                ],            
+            'url' => 'admin/capas',
+        ],
 
-            ]
-        ], 
-        
-      
     ],
- 
+
 
     /*
     |--------------------------------------------------------------------------
