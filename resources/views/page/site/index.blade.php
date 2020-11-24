@@ -1,8 +1,8 @@
 @extends('page.site.layout')
 
-@section('title', 'TITULO DE TESTE')
+@section('title', 'Nação Incógnita')
 @section('box')
-<img style="margin-top:-2em;" src="assets/img/box.png" class="img-fluid img_topo_home" alt="Responsive image" width="100%">
+<img style="margin-top:-2em;" src="{{ url("storage/$capa->path_home")  }}" class="img-fluid img_topo_home" alt="Responsive image" width="100%">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 @stop
 

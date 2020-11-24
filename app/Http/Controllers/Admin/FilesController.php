@@ -1,13 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Capa;
+use App\File;
+use App\Http\Controllers\Controller;
+use App\Mail\newFileMail;
+use App\Models\Arquivo;
 use Illuminate\Http\Request;
-use App\Post;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
-
-class SiteController extends Controller
+class FilesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +20,7 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $capa = Capa::where('path_home', '!=', '')->first();
-        $posts = Post::orderBy('id', 'DESC')->with('category')->get();
-
-        return view('page.site.index',[
-            'posts' => $posts,
-            'capa' =>$capa
-        ]);
+        return  view('page.files.admin.index');
     }
 
     /**
@@ -50,17 +48,11 @@ class SiteController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
-    public function show($noticia)
+    public function show($id)
     {
-
-        $post = Post::where('link', $noticia)->first();
-        $capa = Capa::where('path_interna', '!=', '')->first();
-        return view('page.site.noticia', [
-            'post' => $post,
-            'capa' => $capa
-        ]);
+        //
     }
 
     /**
@@ -96,4 +88,22 @@ class SiteController extends Controller
     {
         //
     }
+
+   public function upload(Request $request)
+   {
+
+       for ($i = 0; $i < count($request['files']); $i++) {
+           $pastas_files = Str::slug('pdf-/'.$request['assunto'], '_');
+           $files = $request->allFiles()['files'][$i];
+
+           $file['assunto'] = $request->assunto;
+           $file['path'] = $files->store($pastas_files);
+
+           if(File::create($file)){
+               return redirect()->back();
+           }
+
+       }
+   }
+
 }

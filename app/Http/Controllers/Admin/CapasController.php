@@ -12,13 +12,14 @@ class CapasController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
         $capas = Capa::all();
         $interna = Capa::where('path_interna', "!=", "null")->orderBy("id", "DESC")->first();
         $home = Capa::where('path_home', "!=", "null")->orderBy("id", "DESC")->first();
+
 
         return view('page.admin.capas.index', [
             'interna' => $interna,
@@ -40,7 +41,7 @@ class CapasController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -50,25 +51,28 @@ class CapasController extends Controller
            $capa = $request->all();
 
            if($request->hasFile('capa_home') && $request->capa_home->isValid()){
-
-               $image_path = $request->capa_home->store('capas/home');
+               $extension = $request->capa_home->extension();
+               $image_path = $request->capa_home->storeAs('capas/home', 'capa_home.'.$extension);
                $capa = new Capa();
                $capa['path_home'] = $image_path;
-
+               if($capa->save()){
+                   return redirect()->back();
+               }
            }
-           $capa->save();
+
        }
         if(isset($request->capa_interna)){
 
-
             if($request->hasFile('capa_interna') && $request->capa_interna->isValid()){
-
-                $image_path = $request->capa_interna->store('capas/interna');
+                $extension = $request->capa_interna->extension();
+                $image_path = $request->capa_interna->storeAs('capas/interna', 'capa_interna.'.$extension);
                 $capa = new Capa();
                 $capa['path_interna'] = $image_path;
-
+                if($capa->save()){
+                    return redirect()->back();
+                }
             }
-            $capa->save();
+
         }
 
     }

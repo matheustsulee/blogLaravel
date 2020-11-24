@@ -264,9 +264,29 @@ return [
             ]
         ],
         [
+            'text'    => 'Seções',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'url'  => 'admin/secao/create',
+                ],
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/secao',
+                ],
+
+            ]
+        ],
+        [
             'text'    => 'Capas',
             'icon'    => 'fas fa-fw fa-share',
             'url' => 'admin/capas',
+        ],
+        [
+            'text'    => 'Videos',
+            'icon'    => 'fas fa-fw fa-share',
+            'url' => 'admin/videos',
         ],
 
     ],

@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
@@ -35,7 +35,7 @@
       <li class="nav-item active">
         <a class="nav-link" href='{{ route("home.site") }}'>Home <span class="sr-only">(página atual)</span></a>
       </li>
-    
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Quadros do Nação
@@ -49,7 +49,7 @@
           <a href="">A Roda das Contradições:<br>Debates e Polêmicas</a> -->
         </div>
       </li>
-      
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
@@ -59,7 +59,7 @@
 </nav>
 
     <div id="site">
-       
+
         <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -83,7 +83,7 @@
             </div>
         </div>
       </div>
-     
+
 
     </div>
   </div>

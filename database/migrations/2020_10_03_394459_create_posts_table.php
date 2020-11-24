@@ -18,11 +18,13 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->text('content');
-            $table->string('img')->nullable();
             $table->text('link');
-            $table->string('tag');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('section_id');
+            $table->foreign('section_id')
+                                ->references('id')
+                                ->on('sections');
             $table->foreign('category_id')
                                 ->references('id')
                                 ->on('categories')
@@ -31,6 +33,7 @@ class CreatePostsTable extends Migration
                                 ->references('id')
                                 ->on('users');
 
+            $table->softDeletes();
             $table->timestampsTz();
 
 

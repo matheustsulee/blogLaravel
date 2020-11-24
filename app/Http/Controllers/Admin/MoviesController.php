@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Capa;
+use App\Http\Controllers\Controller;
+use App\Movie;
 use Illuminate\Http\Request;
-use App\Post;
 
-
-class SiteController extends Controller
+class MoviesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +15,10 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $capa = Capa::where('path_home', '!=', '')->first();
-        $posts = Post::orderBy('id', 'DESC')->with('category')->get();
+        $videos = Movie::orderByDesc('id')->limit('3')->get();
 
-        return view('page.site.index',[
-            'posts' => $posts,
-            'capa' =>$capa
+        return view('page.admin.movies.index',[
+            'videos' => $videos,
         ]);
     }
 
@@ -39,28 +36,29 @@ class SiteController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+
+        $link = new Movie();
+        $link->title = $request->title;
+        $link->link = $request->link;
+        if($link->save()){
+            return redirect()->back();
+        }
+
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
-    public function show($noticia)
+    public function show($id)
     {
-
-        $post = Post::where('link', $noticia)->first();
-        $capa = Capa::where('path_interna', '!=', '')->first();
-        return view('page.site.noticia', [
-            'post' => $post,
-            'capa' => $capa
-        ]);
+        //
     }
 
     /**
@@ -90,10 +88,16 @@ class SiteController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $video = Movie::find($id);
+        if($video){
+            $video->delete();
+
+        }
+        return redirect()->back();
+
     }
 }

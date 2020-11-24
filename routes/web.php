@@ -31,6 +31,13 @@ Route::get('/admin/anuncios/novo', 'Admin\AnunciosController@create')->name('anu
 Route::post('/admin/anuncios/novo', 'Admin\AnunciosController@store')->name('anuncio.novo.store');
 Route::get('/admin/capas', 'Admin\CapasController@index')->name('capas.index');
 Route::post('/admin/capas', 'Admin\CapasController@store')->name('capa.store');
+
+Route::resource('admin/videos', 'Admin\MoviesController');
+
+    Route::resource('admin/arquivos', 'Admin\FilesController');
+    Route::post('admin/arquivos/upload', 'Admin\FilesController@upload')->name('file.upload');
+
+    Route::resource('admin/secao', 'Admin\SectionsController');
 });
 
 

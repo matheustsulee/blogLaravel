@@ -3,15 +3,15 @@
 @section('title', 'Noticias')
 @section('box')
 
-<img style="margin-top:-2em;" src="{{ asset('assets/img/planalto.jpg') }}"  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
+<img style="margin-top:-2em;" src="{{ url("storage/{$capa->path_interna}") }}"  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 @stop
 
 @section('content')
-    
+
 
 <section class="mt-3 mb-5 container">
-    <b> {{ $post->category->name }}</b> | 
+    <b> {{ $post->category->name }}</b> |
     <strong>{{ date('d-m-Y H:i', strtotime($post->created_at)) }}</strong>
     <div class="row mt-3">
         <div class="col-12 col-lg-8 col-md-8">
@@ -21,8 +21,8 @@
                 <div class="text-justify">
                     {!! $post->content !!}
                 </div>
-                
-            
+
+
         </div>
     </div>
 </section>
