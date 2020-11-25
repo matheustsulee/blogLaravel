@@ -23,7 +23,7 @@
                 <h6 class="mt-3 mb-3">{{ $posts[$i]->subtitle }}.</h6>
 
                  <div class="col-12 col-lg-12 col-md-12 p-0">
-                    <img src='{{ url("storage/{$posts[$i]->img}") }}' width="100%" class="ultimas_noticias">
+                    <img src='{{ url("storage/{$posts[$i]->imgs[0]->path}")  }}' width="100%" class="ultimas_noticias">
                     <a type="button" class="btn btn-outline-dark rounded-0 btn-block mt-2" href="noticia/{{ $posts[$i]->link }}">LER +</a>
 
                 </div>
@@ -52,7 +52,10 @@
                          <a type="button" class="btn btn-outline-dark rounded-0 btn-block mt-2" href="noticia/{{ $posts[$i]->link }}">LER +</a>
                     </div>
                     <div class="col-5">
-                        <img class="informes" src='{{ url("storage/{$posts[$i]->img}") }}' width="100%">
+
+                        <img class="informes" src='{{ $posts[$i]->imgs[0]->path }}' width="100%">
+{{--                        <img class="informes" src='{{ url("storage/{$posts[$i]->img}") }}' width="100%">--}}
+
                     </div>
                 </div>
             </div>
@@ -88,7 +91,7 @@
 <section class="container">
     <div class="row">
         <div class="col-12 col-lg-6 col-md-6 ">
-            <img src='{{ url("storage/{$posts[5]->img}") }}' width="100%" class="img_semtitulo">
+            <img src='{{ $posts[5]->imgs[0]->path  }}' width="100%" class="img_semtitulo">
         </div>
         <div class="col-12 col-lg-6 col-md-6">
              <h4 class="mb-3">{{ $posts[5]->title }}</h4>

@@ -20,24 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="746e7944-db28-48d2-bc8f-1b070cc0beed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blogmatheus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blogmatheus.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CapasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CapasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/File.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Movie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_03_394459_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_03_394459_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_07_051146_create_movies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_07_051146_create_movies_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/admin/capas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/admin/capas/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/admin/post/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/admin/post/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/site/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/site/noticia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/noticia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +168,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/projetos/g5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -185,11 +180,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projetos_pessoais\workana\blogmatheus\app\Http\Controllers\Admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\projetos_pessoais\workana\blogmatheus\resources\views\page\admin\movies" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projetos_pessoais\workana\blogmatheus\app\Http\Controllers\Admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +217,8 @@
       <workItem from="1604953626265" duration="540000" />
       <workItem from="1604955143857" duration="690000" />
       <workItem from="1604983903197" duration="9317000" />
-      <workItem from="1606226400996" duration="2053000" />
+      <workItem from="1606226400996" duration="14066000" />
+      <workItem from="1606253912618" duration="2517000" />
     </task>
     <servers />
   </component>
@@ -246,10 +242,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="390" y="151" key="#com.intellij.fileTypes.FileTypeChooser/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604991683153" />
-    <state x="464" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604737036595">
+    <state x="464" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606238333162">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="464" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1604737036595" />
+    <state x="464" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1606238333162" />
     <state x="377" y="93" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604984843956">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -259,20 +255,24 @@
     </state>
     <state x="387" y="111" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604985549716" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604711773743" />
-    <state x="434" y="111" key="FileChooserDialogImpl" timestamp="1604995666813">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606254534423">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="434" y="111" key="FileChooserDialogImpl/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604995666813" />
     <state x="1800" y="111" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@1366.0.1280.680" timestamp="1604948014632" />
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604758501460" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606254534423" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1604730618804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604730618804" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606233001840">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606238951058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606233001840" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606238951058" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606241396961">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606241396961" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

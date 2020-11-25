@@ -20,6 +20,14 @@ class Post extends Model
 
     public function imgs()
     {
+        return $this->hasMany(Image::class);
+    }
+    public function movies()
+    {
+        return $this->hasMany(Movie::class);
+    }
+    public function files()
+    {
         return $this->hasMany(File::class);
     }
 }

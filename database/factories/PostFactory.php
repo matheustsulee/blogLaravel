@@ -12,7 +12,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'title' =>$title,
         'subtitle'=>$this->faker->sentence('15'),
         'content' => $this->faker->text('200'),
-        'img'=> '', $this->faker->imageUrl('640','480'),
         'link'=> $link,
         'category_id' => function(){
             return factory(\App\Category::class)->create()->id;

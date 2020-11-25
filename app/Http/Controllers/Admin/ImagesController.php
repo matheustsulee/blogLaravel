@@ -1,31 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Capa;
-use App\File;
-use App\Movie;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Post;
 
-
-class SiteController extends Controller
+class ImagesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $capa = Capa::where('path_home', '!=', '')->first();
-        $posts = Post::orderBy('id', 'DESC')->with('category')->with('imgs')->get();
-
-
-        return view('page.site.index',[
-            'posts' => $posts,
-            'capa' =>$capa
-        ]);
+        //
     }
 
     /**
@@ -53,21 +42,11 @@ class SiteController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
-    public function show($noticia)
+    public function show($id)
     {
-
-        $post = Post::where('link', $noticia)->with('imgs')->with('files')->first();
-
-        $capa = Capa::where('path_interna', '!=', '')->first();
-
-
-        return view('page.site.noticia', [
-            'post' => $post,
-            'capa' => $capa,
-
-        ]);
+        //
     }
 
     /**

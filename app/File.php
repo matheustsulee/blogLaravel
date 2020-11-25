@@ -11,4 +11,8 @@ class File extends Model
     protected $table = 'files';
     protected $fillable = ['assunto', 'path'];
     //
+
+    public function post(){
+        return $this->belongsTo(Post::class);
+    }
 }

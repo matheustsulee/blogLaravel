@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\File;
+use App\Image;
 use App\Section;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
@@ -59,26 +60,39 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+
         $postagem = new Post();
         $postagem->title = $request->title;
         $postagem->subtitle = $request->subtitle;
         $postagem->content = $request->content;
-        $postagem->tag = $request->tag;
         $postagem->user_id = auth()->user()->id;
-        $postagem->link = Str::slug($postagem->title, "-");
+        $postagem->link = Str::slug($request->title, "-");
         $postagem->category_id = $request->category_id;
+        $postagem->section_id = $request->section_id;
         $postagem->save();
         if($request->hasFile('imagem')) {
             for ($i = 0; $i < count($request->allFiles()['imagem']); $i++) {
                 $file = $request->allFiles()['imagem'][$i];
-                $img = new File();
-                $img->img = $file->store(Str::slug($postagem->title, "-"));
+                $img = new Image();
+
+                $img->path = $file->store("fotos/".Str::slug($postagem->title, "-"));
                 $img->post_id = $postagem->id;
                 $img->save();
                 unset($img);
             }
         }
+        if($request->hasFile('pdf')) {
+            for ($i = 0; $i < count($request->allFiles()['pdf']); $i++) {
+                $file = $request->allFiles()['pdf'][$i];
+                $pdf= new File();
+                $pdf->assunto = Str::slug($request->title, "-");
+                $pdf->path = $file->store("pdfs/".Str::slug($postagem->title, "-"));
+                $pdf->post_id = $postagem->id;
+                $pdf->save();
+                unset($img);
+            }
+        }
+
         return redirect()->back();
     }
 
