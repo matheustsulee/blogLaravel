@@ -20,17 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="746e7944-db28-48d2-bc8f-1b070cc0beed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blogmatheus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blogmatheus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FilesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_03_394459_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_03_394459_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/admin/capas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/admin/capas/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/site/noticia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/noticia.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/bootstrap-4.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery-3.2.1.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery-validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery.mask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/popper-1.12.9.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/js/wow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.green.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.video.play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/owl.carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/noticia.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +231,7 @@
       <workItem from="1604983903197" duration="9317000" />
       <workItem from="1606226400996" duration="14066000" />
       <workItem from="1606253912618" duration="2517000" />
-      <workItem from="1606272943194" duration="6829000" />
+      <workItem from="1606272943194" duration="8132000" />
     </task>
     <servers />
   </component>
