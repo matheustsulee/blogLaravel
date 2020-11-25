@@ -72,7 +72,7 @@ class SiteController extends Controller
 
         return view('page.site.noticia', [
             'post' => $post,
-            'capa' => $capa,
+            'capa' => $capa, 
 
         ]);
     }
