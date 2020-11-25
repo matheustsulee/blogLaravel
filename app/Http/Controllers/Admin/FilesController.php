@@ -9,6 +9,7 @@ use App\Models\Arquivo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class FilesController extends Controller
@@ -52,7 +53,9 @@ class FilesController extends Controller
      */
     public function show($id)
     {
-        //
+
+        $file = File::find($id);
+        return Storage::download($file->path);
     }
 
     /**

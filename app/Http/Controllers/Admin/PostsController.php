@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\File;
 use App\Image;
+use App\Movie;
 use App\Section;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
@@ -61,6 +62,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
 
+
         $postagem = new Post();
         $postagem->title = $request->title;
         $postagem->subtitle = $request->subtitle;
@@ -70,6 +72,13 @@ class PostsController extends Controller
         $postagem->category_id = $request->category_id;
         $postagem->section_id = $request->section_id;
         $postagem->save();
+        if($request->link_movie != null){
+            $movie = new Movie();
+
+            $movie->link = $request->link_movie;
+            $movie->post_id = $postagem->id;
+            $movie->save();
+        }
         if($request->hasFile('imagem')) {
             for ($i = 0; $i < count($request->allFiles()['imagem']); $i++) {
                 $file = $request->allFiles()['imagem'][$i];

@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('subtitle');
             $table->text('content');
             $table->text('link');
+            $table->integer('visity')->default('0');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->unsignedBigInteger('section_id');

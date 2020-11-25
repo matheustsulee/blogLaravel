@@ -21,10 +21,12 @@ class SiteController extends Controller
         $capa = Capa::where('path_home', '!=', '')->first();
         $posts = Post::orderBy('id', 'DESC')->with('category')->with('imgs')->get();
 
+        $mais_visitados = Post::orderBy('visity', 'DESC')->with('category')->with('imgs')->limit('3')->get();
 
         return view('page.site.index',[
             'posts' => $posts,
-            'capa' =>$capa
+            'capa' =>$capa,
+            'mais_visitados'=> $mais_visitados
         ]);
     }
 
@@ -58,9 +60,14 @@ class SiteController extends Controller
     public function show($noticia)
     {
 
-        $post = Post::where('link', $noticia)->with('imgs')->with('files')->first();
+
+        $post = Post::where('link', $noticia)->with(['imgs', 'files', 'movies'])->first();
+
+        $post->visity += '1';
+        $post->update();
 
         $capa = Capa::where('path_interna', '!=', '')->first();
+
 
 
         return view('page.site.noticia', [

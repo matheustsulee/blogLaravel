@@ -17,7 +17,7 @@
         <div class="col-12 col-lg-8 col-md-8">
             <h1>{{ $post->title }}</h1>
                 @foreach($post->imgs as $imagem)
-                <img src='{{ $imagem->path }}' width="100%" class="mt-3 mb-5 mat_noticia">
+                <img src='{{ url("storage/{$imagem->path}") }}' width="100%" class="mt-3 mb-5 mat_noticia">
             @endforeach
                 <div class="text-justify">
                     {!! $post->content !!}
@@ -29,10 +29,14 @@
             <div class="row">
                 <div class="col-12 col-lg-12 col-md-12 text-center">
                     <div class="bg-danger"><b>VIDEO</b></div>
-                    dwqhdwqdqod
+                    <div class="embed-responsive embed-responsive-16by9">
+                        @foreach($post->movies as $movie)
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $movie->link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        @endforeach
+                    </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-12 col-lg-12 col-md-12 text-center">
                     <div class="bg-danger"><b>ARQUIVOS</b></div>
                     <table class="table">
@@ -47,11 +51,11 @@
                         <tbody>
                         @foreach($post->files as $file)
                         <tr>
-                            <th scope="row">{{ $file->assunto }}</th>
+                            <th scope="row">Arquivo PDF</th>
                             <td>
-                                <button type="button" class="btn btn-outline-info btn-block rounded-0">
+                                <a href="{{ route('arquivos.show', $file->id) }}" type="button" class="btn btn-outline-info btn-block rounded-0">
                                     Baixar
-                                </button>
+                                </a>
                             </td>
 
 
@@ -61,7 +65,9 @@
                         </tbody>
                     </table>
                 </div>
+
             </div>
+
         </div>
 
 

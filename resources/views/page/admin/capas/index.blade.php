@@ -3,7 +3,9 @@
 
     <div class="row">
         <div class="col-12 col-md-6 col-lg-6">
+            @if(!empty($home->path_home))
             <img src="{{ url("storage/{$home->path_home}") }}" alt="" width="100%">
+            @endif
                 <form action="{{ route('capa.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="input-group mb-3">
@@ -15,8 +17,10 @@
                 </form>
         </div>
         <div class="col-12 col-md-6 col-lg-6">
-            <img src="{{ url("storage/{$interna->path_interna}") }}" alt="" width="100%">
-            <form action="{{ route('capa.store') }}" method="post" enctype="multipart/form-data">
+            @if(!empty($interna->path_interna))
+                <img src="{{ url("storage/{$interna->path_interna}") }}" alt="" width="100%">
+            @endif
+                <form action="{{ route('capa.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="input-group mb-3">
                     <input type="file" name="capa_interna">
