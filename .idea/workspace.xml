@@ -21,33 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="746e7944-db28-48d2-bc8f-1b070cc0beed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/bootstrap-4.0.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery-3.2.1.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery-validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery.mask.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/popper-1.12.9.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/js/wow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.green.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.theme.green.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/assets/owl.video.play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/owl.carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/assets/owlcarousel/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/noticia.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +153,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../daniel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -231,7 +204,9 @@
       <workItem from="1604983903197" duration="9317000" />
       <workItem from="1606226400996" duration="14066000" />
       <workItem from="1606253912618" duration="2517000" />
-      <workItem from="1606272943194" duration="8132000" />
+      <workItem from="1606272943194" duration="10804000" />
+      <workItem from="1606408354895" duration="1959000" />
+      <workItem from="1606420725636" duration="44000" />
     </task>
     <servers />
   </component>
@@ -269,11 +244,11 @@
     <state x="387" y="111" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604985549716" />
     <state x="1734" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1218.720@1366.0.1218.720" timestamp="1606279579947" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604711773743" />
-    <state x="1779" y="118" key="FileChooserDialogImpl" timestamp="1606279537876">
+    <state x="1779" y="118" key="FileChooserDialogImpl" timestamp="1606413899515">
       <screen x="1366" y="0" width="1218" height="720" />
     </state>
     <state x="434" y="111" key="FileChooserDialogImpl/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604995666813" />
-    <state x="1779" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1218.720@1366.0.1218.720" timestamp="1606279537876" />
+    <state x="1779" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1218.720@1366.0.1218.720" timestamp="1606413899515" />
     <state x="1800" y="111" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@1366.0.1280.680" timestamp="1604948014632" />
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606254534423" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1604730618804">
