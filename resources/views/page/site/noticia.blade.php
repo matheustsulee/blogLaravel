@@ -3,7 +3,7 @@
 @section('title', 'Noticias')
 @section('box')
 
-<img style="margin-top:-2em;" src="{{ url("storage/{$capa->path_interna}") }}"  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
+<img style="margin-top:-2em;" src='{{ url("storage/{$capa->path_interna}") }}'  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 @stop
 
@@ -17,7 +17,7 @@
         <div class="col-12 col-lg-8 col-md-8">
             <h1>{{ $post->title }}</h1>
                 @foreach($post->imgs as $imagem)
-                    <img src='{{ url("storage/{$imagem->path}") }}' width="100%" class="mt-3 mb-5 mat_noticia">
+                    <img src='{{ url("storage/app/public/{$imagem->path}") }}' width="100%" class="mt-3 mb-5 mat_noticia">
                 @endforeach
                 <div class="text-justify">
                     {!! $post->content !!}
@@ -56,8 +56,6 @@
                                     Baixar
                                 </a>
                             </td>
-
-
                         </tr>
                         @endforeach
 
@@ -142,12 +140,39 @@
         </div>
     </div>
     <br><br>
-    <div clas="row">
-        <div class="col-md-1"></div>
+    <div class="row">
         <div class="col-md-8">
-            <textarea class="form-control" rows="" cols=""></textarea>
+    <div class="post">
+        <div class="row">
+            <div class="col-md-1">
+                <img style="width: 50px; height: 50px; border-radius: 50%;" src="https://i.ibb.co/Tg12sZQ/800x400.jpg" alt="user image">
+            </div>
+            <div class="col-md-11">
+                <textarea class="form-control form-control-lg"></textarea>                   
+            </div>
         </div>
     </div>
+    <div  class="post mt-5">
+        <div class="row">
+            <div class="col-md-1">
+                <img style="width: 50px; height: 50px; border-radius: 50%;" src="https://i.ibb.co/Tg12sZQ/800x400.jpg" alt="user image">
+            </div>
+            <div class="col-md-11">
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore the hate as they create awesome
+                        tools to help create filler text for everyone from bacon lovers
+                        to Charlie Sheen fans.
+            </div>
+        </div>
+    </div>
+                      
+                       <!-- /.user-block -->
+                    
+
+                    </div>
+                    </div>
+                    </div>
 </section>
 
 
