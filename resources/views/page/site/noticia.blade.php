@@ -3,7 +3,7 @@
 @section('title', 'Noticias')
 @section('box')
 
-<img style="margin-top:-2em;" src="{{ url("storage/{$capa->path_interna}") }}"  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
+<img style="margin-top:-2em;" src='{{ url("storage/{$capa->path_interna}") }}'  class="img-fluid topo_noticia" alt="Responsive image" width="100%">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 @stop
 
@@ -17,11 +17,12 @@
         <div class="col-12 col-lg-8 col-md-8">
             <h1>{{ $post->title }}</h1>
                 @foreach($post->imgs as $imagem)
-                <img src='{{ url("storage/{$imagem->path}") }}' width="100%" class="mt-3 mb-5 mat_noticia">
-            @endforeach
+                    <img src='{{ url("storage/app/public/{$imagem->path}") }}' width="100%" class="mt-3 mb-5 mat_noticia">
+                @endforeach
                 <div class="text-justify">
                     {!! $post->content !!}
                 </div>
+
 
 
         </div>
@@ -43,9 +44,7 @@
                         <thead>
                         <tr>
                             <th scope="col">Nome</th>
-
                             <th scope="col">Ação</th>
-
                         </tr>
                         </thead>
                         <tbody>
@@ -57,21 +56,123 @@
                                     Baixar
                                 </a>
                             </td>
-
-
                         </tr>
                         @endforeach
 
                         </tbody>
                     </table>
                 </div>
-
             </div>
-
         </div>
-
-
     </div>
+    <br><br><br>
+    <div class="row justify-content-start ">
+
+    <div class="col-md-7"></div>
+                    <div class="col-md-4 ">
+                        <b>Compartilhe!</b>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fab fa-facebook-square fa-3x text-primary"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://api.whatsapp.com/send?text="><i class="fab fa-whatsapp fa-3x"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fab fa-wordpress fa-3x text-info"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fa fa-envelope fa-3x "></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fab fa-skype fa-3x text-primary"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href=" https://www.linkedin.com/shareArticle?mini=true&url="><i class="fab fa-linkedin fa-3x text-info"></i></a>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fab fa-blogger fa-3x text-warning"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fab fa-pinterest fa-3x text-danger"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://telegram.me/share/url?url=[URL]&text=[TEXTO]"><i class="fab fa-telegram fa-3x text-info"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://embed.tumblr.com/share"><i class="fab fa-tumblr-square fa-3x "></i></a>
+                                    <script>!function(d,s,id){var js,ajs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://assets.tumblr.com/share-button.js";ajs.parentNode.insertBefore(js,ajs);}}(document, "script", "tumblr-js");</script>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fab fa-skype fa-3x text-primary"></i></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#"><i class="fab fa-vk fa-3x text-info"></i></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <br><br>
+    <div class="row">
+        <div class="col-md-9">
+            <h2>Algo a dizer? Aproveite a seção de comentários!</h2>
+            <h4>Para escrever um comentário, faça login:</h4>
+            <div class="row">
+                                <div class="col-md-1">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fab fa-facebook-square fa-3x text-primary"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#"><i class="fab fa-twitter fa-3x text-primary"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#"><i class="fab fa-vk fa-3x text-info"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#"><i class="fab fa-wordpress fa-3x text-info"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#"><i class="fa fa-envelope fa-3x"></i></a>
+                                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-8">
+    <div class="post">
+        <div class="row">
+            <div class="col-md-1">
+                <img style="width: 50px; height: 50px; border-radius: 50%;" src="https://i.ibb.co/Tg12sZQ/800x400.jpg" alt="user image">
+            </div>
+            <div class="col-md-11">
+                <textarea class="form-control form-control-lg"></textarea>                   
+            </div>
+        </div>
+    </div>
+    <div  class="post mt-5">
+        <div class="row">
+            <div class="col-md-1">
+                <img style="width: 50px; height: 50px; border-radius: 50%;" src="https://i.ibb.co/Tg12sZQ/800x400.jpg" alt="user image">
+            </div>
+            <div class="col-md-11">
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore the hate as they create awesome
+                        tools to help create filler text for everyone from bacon lovers
+                        to Charlie Sheen fans.
+            </div>
+        </div>
+    </div>
+                      
+                       <!-- /.user-block -->
+                    
+
+                    </div>
+                    </div>
+                    </div>
 </section>
 
 
