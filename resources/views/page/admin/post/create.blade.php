@@ -72,6 +72,6 @@
     </form>
   </div>
 </div>
-<script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.0/full/ckeditor.js"></script>
 <script  type="text/javascript" src="{{ asset('assets/js/ckEditor.js') }}" ></script>
 @endsection

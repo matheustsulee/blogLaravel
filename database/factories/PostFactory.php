@@ -8,6 +8,8 @@ use Faker\Generator as Faker;
 $factory->define(Post::class, function (Faker $faker) {
     $title = $this->faker->sentence('6');
     $link = \Illuminate\Support\Str::slug($title);
+    $img = $this->faker->image("storage/app/public/fotos/",1580,1580,'cats', null, false);
+
     return [
         'title' =>$title,
         'subtitle'=>$this->faker->sentence('15'),

@@ -2,8 +2,9 @@
 
 @section('title', 'Nação Incógnita')
 @section('box')
-
+@isset($capa->path_home)
 <img style="margin-top:-2em;" src='{{ asset("storage/$capa->path_home")  }}' class="img-fluid img_topo_home" alt="Responsive image" width="100%">
+@endif
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 @stop
 

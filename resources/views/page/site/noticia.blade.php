@@ -17,7 +17,7 @@
         <div class="col-12 col-lg-8 col-md-8">
             <h1>{{ $post->title }}</h1>
                 @foreach($post->imgs as $imagem)
-                    <img src='{{ url("storage/app/public/{$imagem->path}") }}' width="100%" class="mt-3 mb-5 mat_noticia">
+                    <img src='{{ url("storage/{$post->imgs[0]->path}")  }}' width="100%" class="mt-3 mb-5 mat_noticia">
                 @endforeach
                 <div class="text-justify">
                     {!! $post->content !!}
@@ -148,7 +148,7 @@
                 <img style="width: 50px; height: 50px; border-radius: 50%;" src="https://i.ibb.co/Tg12sZQ/800x400.jpg" alt="user image">
             </div>
             <div class="col-md-11">
-                <textarea class="form-control form-control-lg"></textarea>                   
+                <textarea class="form-control form-control-lg"></textarea>
             </div>
         </div>
     </div>
@@ -166,9 +166,9 @@
             </div>
         </div>
     </div>
-                      
+
                        <!-- /.user-block -->
-                    
+
 
                     </div>
                     </div>

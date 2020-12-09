@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'auth'], function () {
+
   Route::get('/admin/postagem/novo', 'Admin\PostsController@create')->name('postagem.create');
 Route::post('/admin/postagem/novo', 'Admin\PostsController@store')->name('postagem.store');
 Route::get('/admin/postagem', 'Admin\PostsController@index')->name('admin.index');
@@ -46,14 +47,13 @@ Route::resource('admin/videos', 'Admin\MoviesController');
 
 
 Route::get('/', 'SiteController@index')->name('home.site');
+Route::get('/login', 'Auth\LoginController@login')->name('site.login');
 Route::get('/noticia/{notica}', 'SiteController@show')->name('noticia.site');
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

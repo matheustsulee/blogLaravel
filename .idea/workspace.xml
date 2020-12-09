@@ -21,6 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="746e7944-db28-48d2-bc8f-1b070cc0beed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/admin/post/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/admin/post/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/site/noticia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/site/noticia.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,6 +214,18 @@
       <workItem from="1606272943194" duration="10804000" />
       <workItem from="1606408354895" duration="1959000" />
       <workItem from="1606420725636" duration="44000" />
+      <workItem from="1606426139857" duration="453000" />
+      <workItem from="1606457993877" duration="11000" />
+      <workItem from="1606955528274" duration="368000" />
+      <workItem from="1606977434435" duration="856000" />
+      <workItem from="1606979892995" duration="286000" />
+      <workItem from="1607063754919" duration="2783000" />
+      <workItem from="1607182600732" duration="619000" />
+      <workItem from="1607183664474" duration="1174000" />
+      <workItem from="1607323630218" duration="3720000" />
+      <workItem from="1607334672984" duration="203000" />
+      <workItem from="1607446095672" duration="493000" />
+      <workItem from="1607447240361" duration="26000" />
     </task>
     <servers />
   </component>
@@ -244,12 +263,16 @@
     <state x="387" y="111" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604985549716" />
     <state x="1734" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1218.720@1366.0.1218.720" timestamp="1606279579947" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604711773743" />
-    <state x="1779" y="118" key="FileChooserDialogImpl" timestamp="1606413899515">
-      <screen x="1366" y="0" width="1218" height="720" />
+    <state x="442" y="125" key="FileChooserDialogImpl" timestamp="1607327449861">
+      <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="434" y="111" key="FileChooserDialogImpl/-1366.0.1366.708/0.0.1280.680@0.0.1280.680" timestamp="1604995666813" />
+    <state x="1800" y="111" key="FileChooserDialogImpl/0.0.1298.768/1366.0.1280.680@1366.0.1280.680" timestamp="1606955898604" />
+    <state x="440" y="125" key="FileChooserDialogImpl/0.0.1298.768@0.0.1298.768" timestamp="1607074297273" />
+    <state x="440" y="125" key="FileChooserDialogImpl/0.0.1299.768@0.0.1299.768" timestamp="1607207238160" />
+    <state x="442" y="125" key="FileChooserDialogImpl/0.0.1304.768@0.0.1304.768" timestamp="1607327449861" />
     <state x="1779" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1218.720@1366.0.1218.720" timestamp="1606413899515" />
-    <state x="1800" y="111" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@1366.0.1280.680" timestamp="1604948014632" />
+    <state x="1800" y="111" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@1366.0.1280.680" timestamp="1606978576854" />
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606254534423" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1604730618804">
       <screen x="0" y="0" width="1366" height="728" />
